@@ -7,16 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Detalles del autor con codigo {{$autor->codigo_autor}}</h1>
-    <table>
-        <tr>
-            <td>Nombre</td>
-            <td>{{$autor->nombre_autor}}</td>
-        </tr>
-        <tr>
-            <td>Nacionalidad</td>
-            <td>{{$autor->nacionalidad}}</td>
-        </tr>
-    </table>
+    @if($autor)
+        <h1>Detalles del autor con codigo {{$autor->codigo_autor}}</h1>
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td>{{$autor->nombre_autor}}</td>
+            </tr>
+            <tr>
+                <td>Nacionalidad</td>
+                <td>{{$autor->nacionalidad}}</td>
+            </tr>
+        </table>
+    @else
+        <h1>No existe un libro con este codigo</h1>
+    @endif
 </body>
 </html>

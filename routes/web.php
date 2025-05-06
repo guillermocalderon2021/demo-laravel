@@ -14,6 +14,10 @@ Route::get('/prueba', function(){
     
 });
 
+Route::get('/prueba2', function(){
+    return view("prueba2");
+});
+
 Route::get('/autores', [AutorController::class, 'index']);
 Route::get('/autores/new', [AutorController::class, 'create']);
 Route::get('/autores/edit/{codigo}', [AutorController::class, 'edit']);
